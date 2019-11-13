@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas">
+        <h1> simple readmore / readless button using Jquery </h1>
+        <div id="box">
+            <h2 id="heading"><i class="fab fa-instagram fa-2x" id="icon"></i> Karthik.Web.Dev</h2>
+            
+            <p id="para">Karthik.Web.Dev is an online showcase of web apps and creations by Karthik.<span id="matter"> It showcases the 100days coding challenge, make karthik more consistant in web development and also build his portfolio. Atpresent developing his skills in MEAN Stack.</span></p>
+            <button id="readmore">read more</button>
+            <button id="readless">read less</button>
+        </div>
+    </div>
+</body>
+<script>
+   $('document').ready(function(){
+        $('#matter').hide();
+        $('#readless').hide();
+        $('#readless').on('click',function(){
+            $('#matter').hide();
+            $('#readless').hide();
+            $('#readmore').show();
+        });
+        $('#readmore').on('click',function(){
+            $('#matter').show();
+            $("#readmore").hide();
+            $('#readless').show();
+        });
+    });
+</script>
+</html>
